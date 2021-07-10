@@ -18,7 +18,24 @@ class Stack:
     
     def size(self):
         return len(self.container)
-    
+
+def reverse_string(s):
+    stack = Stack()
+
+    for ch in s:
+        stack.push(ch)
+
+    rstr = ''
+    while stack.size()!=0:
+        rstr += str(stack.pop())
+
+    return rstr
+
+
+if __name__ == '__main__':
+    print(reverse_string("We will conquere COVI-19"))
+    print(reverse_string("I am the king"))
+   
 s = Stack()
 s.push(5)
 s.push(4)
